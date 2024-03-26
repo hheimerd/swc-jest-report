@@ -5,6 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@babel/preset-env':
+    specifier: ^7.24.0
+    version: 7.24.0(@babel/core@7.24.0)
+  '@babel/preset-react':
+    specifier: ^7.23.3
+    version: 7.23.3(@babel/core@7.24.0)
   '@types/jest':
     specifier: ^27.5.2
     version: 27.5.2

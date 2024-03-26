@@ -8,7 +8,7 @@
     "collectCoverageFrom": [
         "src/App.tsx"
     ],
-    "coverageDirectory": "<rootDir>/__reports/swc",
+    "coverageDirectory": "<rootDir>/__reports/babel",
     "transformIgnorePatterns": [
         "/node_modules/"
     ],
@@ -18,16 +18,5 @@
     ],
     "coverageReporters": [
         "lcov"
-    ],
-    "transform": {
-        "^.+\\.(t|j)sx?$": [
-            "@swc/jest",
-            {
-                "jsc": {
-                    "target": "es2021"
-                },
-                "sourceMaps": "inline"
-            }
-        ]
-    }
+    ]
 }

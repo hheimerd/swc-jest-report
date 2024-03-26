@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-react": "^7.23.3",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.87",
     "@types/react": "^18.2.64",
@@ -17,7 +19,9 @@
     "typescript": "^4.9.5"
   },
   "scripts": {
-    "test": "jest --coverage"
+    "test": "npm run test:babel && npm run test:swc",
+    "test:swc": "jest --config=jest.config.json --coverage",
+    "test:babel": "jest --config=jest-babel.config.json --coverage"
   },
   "devDependencies": {
     "@swc/cli": "^0.3.10",

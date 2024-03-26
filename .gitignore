@@ -21,5 +21,5 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-__reports/lcov-report
+__reports/**/lcov-report
 .idea
