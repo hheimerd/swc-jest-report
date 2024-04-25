@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Comp({ anything }: { anything: number }) {
+function Comp({ anything }: { anything?: number }) {
   return <>{anything}</>;
 }
 
