@@ -3,15 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@babel/preset-env": "^7.24.0",
-    "@babel/preset-react": "^7.23.3",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.87",
-    "@types/react": "^18.2.64",
-    "@types/react-dom": "^18.2.21",
-    "@types/react-test-renderer": "^18.0.7",
-    "babel-jest": "^29.7.0",
-    "jest-cli": "^29.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -19,14 +10,32 @@
     "typescript": "^4.9.5"
   },
   "scripts": {
-    "test": "npm run test:babel && npm run test:swc",
-    "test:swc": "jest --config=jest.config.json --coverage",
-    "test:babel": "jest --config=jest-babel.config.json --coverage"
+    "jest": "npm run jest:babel && npm run jest:swc",
+    "jest:swc": "jest --config=jest.config.json --coverage",
+    "jest:babel": "jest --config=jest-babel.config.json --coverage",
+    "instrument": "node ./instrument.js"
   },
   "devDependencies": {
+    "ts-node": "^10.9.2",
     "@swc/cli": "^0.3.10",
-    "@swc/core": "^1.4.6",
+    "@swc/core": "^1.4.0",
     "@swc/jest": "^0.2.36",
-    "jest": "^29.7.0"
+    "swc-plugin-coverage-instrument": "^0.0.21",
+    "babel-plugin-istanbul": "^6.1.1",
+    "jest": "^29.7.0",
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.24.1",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.87",
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
+    "@types/react-test-renderer": "^18.0.7",
+    "babel-jest": "^29.7.0",
+    "babel-preset-react-app": "^10.0.1",
+    "istanbul-lib-coverage": "^3.2.2",
+    "jest-cli": "^29.7.0"
   }
 }
